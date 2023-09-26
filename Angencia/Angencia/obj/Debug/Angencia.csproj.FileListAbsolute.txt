@@ -7,3 +7,4 @@ C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.c
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.csproj.CoreCompileInputs.cache
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.exe
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.pdb
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.Login.resources
