@@ -1,0 +1,9 @@
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\bin\Debug\Angencia.exe.config
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\bin\Debug\Angencia.exe
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\bin\Debug\Angencia.pdb
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.csproj.AssemblyReference.cache
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.Properties.Resources.resources
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.csproj.GenerateResource.cache
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.csproj.CoreCompileInputs.cache
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.exe
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.pdb
