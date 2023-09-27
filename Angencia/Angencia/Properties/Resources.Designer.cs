@@ -63,6 +63,16 @@ namespace Angencia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap caja_de_herramientas {
+            get {
+                object obj = ResourceManager.GetObject("caja-de-herramientas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cisne__1_ {
             get {
                 object obj = ResourceManager.GetObject("cisne (1)", resourceCulture);
@@ -76,6 +86,26 @@ namespace Angencia.Properties {
         internal static System.Drawing.Bitmap cisne__2_ {
             get {
                 object obj = ResourceManager.GetObject("cisne (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap configuracion {
+            get {
+                object obj = ResourceManager.GetObject("configuracion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap corona {
+            get {
+                object obj = ResourceManager.GetObject("corona", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

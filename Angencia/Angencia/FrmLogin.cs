@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Angencia
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -20,6 +20,13 @@ namespace Angencia
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnEntrar_Click(object sender, EventArgs e)
+        {
+            Menu Abrir= new Menu();
+            this.Hide();
+            Abrir.Show();
         }
     }
 }
