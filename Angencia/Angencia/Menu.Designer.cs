@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Barraherramientas = new System.Windows.Forms.ToolStrip();
-            this.LblTaller = new System.Windows.Forms.ToolStripLabel();
             this.BtnTaller = new System.Windows.Forms.ToolStripButton();
-            this.LblHerramientas = new System.Windows.Forms.ToolStripLabel();
             this.BtnHerramientas = new System.Windows.Forms.ToolStripButton();
-            this.LblAdministrador = new System.Windows.Forms.ToolStripLabel();
             this.BtnAdmin = new System.Windows.Forms.ToolStripButton();
+            this.PanelShow = new System.Windows.Forms.Panel();
+            this.Verificar = new System.Windows.Forms.Timer(this.components);
             this.Barraherramientas.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,65 +42,57 @@
             // 
             this.Barraherramientas.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.Barraherramientas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LblTaller,
             this.BtnTaller,
-            this.LblHerramientas,
             this.BtnHerramientas,
-            this.LblAdministrador,
             this.BtnAdmin});
             this.Barraherramientas.Location = new System.Drawing.Point(0, 0);
             this.Barraherramientas.Name = "Barraherramientas";
-            this.Barraherramientas.Size = new System.Drawing.Size(836, 33);
+            this.Barraherramientas.Size = new System.Drawing.Size(1165, 34);
             this.Barraherramientas.TabIndex = 1;
             this.Barraherramientas.Text = "toolStrip1";
-            // 
-            // LblTaller
-            // 
-            this.LblTaller.Name = "LblTaller";
-            this.LblTaller.Size = new System.Drawing.Size(51, 28);
-            this.LblTaller.Text = "Taller";
-            this.LblTaller.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // BtnTaller
             // 
             this.BtnTaller.BackColor = System.Drawing.Color.Transparent;
             this.BtnTaller.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnTaller.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BtnTaller.Image = global::Angencia.Properties.Resources.configuracion;
             this.BtnTaller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnTaller.Name = "BtnTaller";
-            this.BtnTaller.Size = new System.Drawing.Size(34, 28);
-            this.BtnTaller.Text = "toolStripButton1";
-            // 
-            // LblHerramientas
-            // 
-            this.LblHerramientas.Name = "LblHerramientas";
-            this.LblHerramientas.Size = new System.Drawing.Size(117, 28);
-            this.LblHerramientas.Text = "Herramientas";
+            this.BtnTaller.Size = new System.Drawing.Size(79, 29);
+            this.BtnTaller.Text = "Taller";
+            this.BtnTaller.ToolTipText = "Registro de herramientas en el taller";
+            this.BtnTaller.Click += new System.EventHandler(this.BtnTaller_Click);
             // 
             // BtnHerramientas
             // 
-            this.BtnHerramientas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BtnHerramientas.Image = global::Angencia.Properties.Resources.caja_de_herramientas;
             this.BtnHerramientas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnHerramientas.Name = "BtnHerramientas";
-            this.BtnHerramientas.Size = new System.Drawing.Size(34, 28);
-            this.BtnHerramientas.Text = "toolStripButton2";
-            // 
-            // LblAdministrador
-            // 
-            this.LblAdministrador.Name = "LblAdministrador";
-            this.LblAdministrador.Size = new System.Drawing.Size(126, 28);
-            this.LblAdministrador.Text = "Administrador";
+            this.BtnHerramientas.Size = new System.Drawing.Size(132, 29);
+            this.BtnHerramientas.Text = "Refacciones";
+            this.BtnHerramientas.ToolTipText = "Información de las refacciones existentes";
             // 
             // BtnAdmin
             // 
-            this.BtnAdmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BtnAdmin.Image = global::Angencia.Properties.Resources.corona;
             this.BtnAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAdmin.Name = "BtnAdmin";
-            this.BtnAdmin.Size = new System.Drawing.Size(34, 28);
-            this.BtnAdmin.Text = "toolStripButton3";
+            this.BtnAdmin.Size = new System.Drawing.Size(154, 29);
+            this.BtnAdmin.Text = "Administrador";
+            this.BtnAdmin.ToolTipText = "Creacion de usuarios y control de modulos";
+            // 
+            // PanelShow
+            // 
+            this.PanelShow.Location = new System.Drawing.Point(12, 64);
+            this.PanelShow.Name = "PanelShow";
+            this.PanelShow.Size = new System.Drawing.Size(1141, 630);
+            this.PanelShow.TabIndex = 2;
+            this.PanelShow.Visible = false;
+            // 
+            // Verificar
+            // 
+            this.Verificar.Enabled = true;
+            this.Verificar.Tick += new System.EventHandler(this.Verificar_Tick);
             // 
             // Menu
             // 
@@ -108,12 +100,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Angencia.Properties.Resources.Fondo_Morado2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(836, 622);
+            this.ClientSize = new System.Drawing.Size(1165, 716);
+            this.Controls.Add(this.PanelShow);
             this.Controls.Add(this.Barraherramientas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.Barraherramientas.ResumeLayout(false);
             this.Barraherramientas.PerformLayout();
             this.ResumeLayout(false);
@@ -123,11 +117,10 @@
 
         #endregion
         private System.Windows.Forms.ToolStrip Barraherramientas;
-        private System.Windows.Forms.ToolStripLabel LblTaller;
         private System.Windows.Forms.ToolStripButton BtnTaller;
-        private System.Windows.Forms.ToolStripLabel LblHerramientas;
         private System.Windows.Forms.ToolStripButton BtnHerramientas;
-        private System.Windows.Forms.ToolStripLabel LblAdministrador;
         private System.Windows.Forms.ToolStripButton BtnAdmin;
+        private System.Windows.Forms.Panel PanelShow;
+        private System.Windows.Forms.Timer Verificar;
     }
 }
