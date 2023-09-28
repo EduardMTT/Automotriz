@@ -7,3 +7,8 @@ C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.c
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.csproj.CoreCompileInputs.cache
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.exe
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.pdb
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.Menu.resources
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.FrmLogin.resources
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.FrmTaller.resources
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.FrmRefacciones.resources
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.FrmAdministrador.resources
