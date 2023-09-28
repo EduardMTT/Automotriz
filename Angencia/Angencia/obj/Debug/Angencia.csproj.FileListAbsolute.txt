@@ -11,3 +11,4 @@ C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.M
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.FrmLogin.resources
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.FrmTaller.resources
 C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.FrmRefacciones.resources
+C:\Users\eduar\Desktop\Agencia_Automotriz\Angencia\Angencia\obj\Debug\Angencia.FrmAdministrador.resources

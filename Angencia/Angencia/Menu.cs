@@ -83,5 +83,11 @@ namespace Angencia
                 MessageBox.Show("Ya tienes un modulo abierto, finaliza esa tarea para iniciar otra", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void BtnAdmin_Click(object sender, EventArgs e)
+        {
+            FrmAdministrador Abrir = new FrmAdministrador();
+            Abrir.ShowDialog();
+        }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdministrador.Designer.cs">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAdministrador.resx">
+      <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\motor-del-coche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
