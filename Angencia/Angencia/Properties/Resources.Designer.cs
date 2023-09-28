@@ -193,6 +193,16 @@ namespace Angencia.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap motor_del_coche {
+            get {
+                object obj = ResourceManager.GetObject("motor-del-coche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Taller {
             get {
                 object obj = ResourceManager.GetObject("Taller", resourceCulture);

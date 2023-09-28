@@ -1,6 +1,6 @@
 ﻿namespace Angencia
 {
-    partial class FrmTaller
+    partial class FrmRefacciones
     {
         /// <summary>
         /// Required designer variable.
@@ -28,40 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             this.GrupoDatos = new System.Windows.Forms.GroupBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtMarca = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtMedida = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.TxtCodigo = new System.Windows.Forms.TextBox();
+            this.TxtCodigoBarras = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GrupoDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // label6
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(321, 127);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 491);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(4, 17);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(343, 72);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Refacciones";
             // 
             // GrupoDatos
             // 
@@ -71,21 +68,19 @@
             this.GrupoDatos.Controls.Add(this.label5);
             this.GrupoDatos.Controls.Add(this.TxtMarca);
             this.GrupoDatos.Controls.Add(this.label4);
-            this.GrupoDatos.Controls.Add(this.TxtMedida);
-            this.GrupoDatos.Controls.Add(this.label3);
             this.GrupoDatos.Controls.Add(this.TxtNombre);
             this.GrupoDatos.Controls.Add(this.label2);
-            this.GrupoDatos.Controls.Add(this.TxtCodigo);
+            this.GrupoDatos.Controls.Add(this.TxtCodigoBarras);
             this.GrupoDatos.Controls.Add(this.label1);
             this.GrupoDatos.Enabled = false;
             this.GrupoDatos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.GrupoDatos.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GrupoDatos.Location = new System.Drawing.Point(12, 127);
+            this.GrupoDatos.Location = new System.Drawing.Point(2, 119);
             this.GrupoDatos.Name = "GrupoDatos";
             this.GrupoDatos.Size = new System.Drawing.Size(303, 491);
-            this.GrupoDatos.TabIndex = 2;
+            this.GrupoDatos.TabIndex = 11;
             this.GrupoDatos.TabStop = false;
-            this.GrupoDatos.Text = "Herramienta";
+            this.GrupoDatos.Text = "Refaccion";
             this.GrupoDatos.Enter += new System.EventHandler(this.GrupoDatos_Enter);
             // 
             // BtnGuardar
@@ -122,7 +117,7 @@
             // TxtMarca
             // 
             this.TxtMarca.Font = new System.Drawing.Font("Yu Gothic Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMarca.Location = new System.Drawing.Point(132, 215);
+            this.TxtMarca.Location = new System.Drawing.Point(7, 220);
             this.TxtMarca.Name = "TxtMarca";
             this.TxtMarca.Size = new System.Drawing.Size(165, 40);
             this.TxtMarca.TabIndex = 7;
@@ -131,29 +126,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 186);
+            this.label4.Location = new System.Drawing.Point(9, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 26);
             this.label4.TabIndex = 6;
             this.label4.Text = "Marca";
-            // 
-            // TxtMedida
-            // 
-            this.TxtMedida.Font = new System.Drawing.Font("Yu Gothic Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtMedida.Location = new System.Drawing.Point(9, 215);
-            this.TxtMedida.Name = "TxtMedida";
-            this.TxtMedida.Size = new System.Drawing.Size(81, 40);
-            this.TxtMedida.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 186);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 26);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Medida";
             // 
             // TxtNombre
             // 
@@ -162,7 +139,6 @@
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(291, 40);
             this.TxtNombre.TabIndex = 3;
-            this.TxtNombre.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -174,103 +150,96 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombre";
             // 
-            // TxtCodigo
+            // TxtCodigoBarras
             // 
-            this.TxtCodigo.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCodigo.Location = new System.Drawing.Point(209, 52);
-            this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(88, 33);
-            this.TxtCodigo.TabIndex = 1;
+            this.TxtCodigoBarras.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodigoBarras.Location = new System.Drawing.Point(209, 52);
+            this.TxtCodigoBarras.Name = "TxtCodigoBarras";
+            this.TxtCodigoBarras.Size = new System.Drawing.Size(88, 33);
+            this.TxtCodigoBarras.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(127, 55);
+            this.label1.Location = new System.Drawing.Point(34, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 26);
+            this.label1.Size = new System.Drawing.Size(169, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Codigo";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Codigo de barras";
             // 
-            // label6
+            // dataGridView1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 72);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Taller";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(311, 119);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(796, 491);
+            this.dataGridView1.TabIndex = 10;
             // 
             // BtnCerrar
             // 
             this.BtnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnCerrar.BackgroundImage = global::Angencia.Properties.Resources.cerca;
             this.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnCerrar.Location = new System.Drawing.Point(1069, 12);
+            this.BtnCerrar.Location = new System.Drawing.Point(1059, 4);
             this.BtnCerrar.Name = "BtnCerrar";
             this.BtnCerrar.Size = new System.Drawing.Size(48, 47);
-            this.BtnCerrar.TabIndex = 8;
+            this.BtnCerrar.TabIndex = 16;
             this.BtnCerrar.UseVisualStyleBackColor = false;
             this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Angencia.Properties.Resources.mecanico;
+            this.pictureBox1.BackgroundImage = global::Angencia.Properties.Resources.motor_del_coche;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(201, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(327, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 105);
-            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.Size = new System.Drawing.Size(117, 105);
+            this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // BtnAgregar
             // 
             this.BtnAgregar.BackColor = System.Drawing.Color.Transparent;
             this.BtnAgregar.BackgroundImage = global::Angencia.Properties.Resources.agregar_boton;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnAgregar.Location = new System.Drawing.Point(642, 74);
+            this.BtnAgregar.Location = new System.Drawing.Point(632, 66);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(48, 47);
-            this.BtnAgregar.TabIndex = 6;
+            this.BtnAgregar.TabIndex = 14;
             this.BtnAgregar.UseVisualStyleBackColor = false;
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnEditar
             // 
             this.BtnEditar.BackColor = System.Drawing.Color.Transparent;
             this.BtnEditar.BackgroundImage = global::Angencia.Properties.Resources.editar;
             this.BtnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnEditar.Location = new System.Drawing.Point(750, 74);
+            this.BtnEditar.Location = new System.Drawing.Point(740, 66);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(48, 47);
-            this.BtnEditar.TabIndex = 5;
+            this.BtnEditar.TabIndex = 13;
             this.BtnEditar.UseVisualStyleBackColor = false;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnBorrar
             // 
             this.BtnBorrar.BackColor = System.Drawing.Color.Transparent;
             this.BtnBorrar.BackgroundImage = global::Angencia.Properties.Resources.borrar;
             this.BtnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBorrar.Location = new System.Drawing.Point(696, 74);
+            this.BtnBorrar.Location = new System.Drawing.Point(686, 66);
             this.BtnBorrar.Name = "BtnBorrar";
             this.BtnBorrar.Size = new System.Drawing.Size(48, 47);
-            this.BtnBorrar.TabIndex = 4;
+            this.BtnBorrar.TabIndex = 12;
             this.BtnBorrar.UseVisualStyleBackColor = false;
-            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
-            // FrmTaller
+            // FrmRefacciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1141, 630);
+            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.ClientSize = new System.Drawing.Size(1119, 620);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.pictureBox1);
@@ -280,11 +249,11 @@
             this.Controls.Add(this.GrupoDatos);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmTaller";
-            this.Text = "FrmTaller";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "FrmRefacciones";
+            this.Text = "Refacciones";
             this.GrupoDatos.ResumeLayout(false);
             this.GrupoDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -292,24 +261,23 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button BtnCerrar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BtnAgregar;
+        private System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.Button BtnBorrar;
         private System.Windows.Forms.GroupBox GrupoDatos;
-        private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtCodigo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TxtMedida;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtMarca;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.TextBox TxtDescripcion;
-        private System.Windows.Forms.Button BtnBorrar;
-        private System.Windows.Forms.Button BtnEditar;
-        private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button BtnCerrar;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox TxtCodigoBarras;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

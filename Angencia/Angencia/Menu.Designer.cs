@@ -71,6 +71,7 @@
             this.BtnHerramientas.Size = new System.Drawing.Size(132, 29);
             this.BtnHerramientas.Text = "Refacciones";
             this.BtnHerramientas.ToolTipText = "Información de las refacciones existentes";
+            this.BtnHerramientas.Click += new System.EventHandler(this.BtnHerramientas_Click);
             // 
             // BtnAdmin
             // 

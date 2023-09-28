@@ -40,11 +40,27 @@ namespace Angencia
                 PanelShow.Controls.Add(Abrir);
                 Abrir.Show();
             }
+            if (Opcion == 2)
+            {
+                FrmRefacciones Abrir = new FrmRefacciones();
+                Abrir.TopLevel = false;
+                Abrir.Dock = DockStyle.Fill;
+                PanelShow.Controls.Add(Abrir);
+                Abrir.Show();
+            }
         }
         private void BtnTaller_Click(object sender, EventArgs e)
         {
-            PanelShow.Visible=true;
-            CrearFromulario(1);
+            if (PanelShow.Controls.Count == 0)
+            {
+                PanelShow.Visible = true;
+                CrearFromulario(1);
+            }
+            else 
+            {
+                MessageBox.Show("Ya tienes un modulo abierto, finaliza esa tarea para iniciar otra","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            
         }
 
         private void Verificar_Tick(object sender, EventArgs e)
@@ -52,6 +68,19 @@ namespace Angencia
             if (PanelShow.Controls.Count == 0)
             {
                 PanelShow.Visible = false;
+            }
+        }
+
+        private void BtnHerramientas_Click(object sender, EventArgs e)
+        {
+            if (PanelShow.Controls.Count == 0)
+            {
+                PanelShow.Visible = true;
+                CrearFromulario(2);
+            }
+            else
+            {
+                MessageBox.Show("Ya tienes un modulo abierto, finaliza esa tarea para iniciar otra", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

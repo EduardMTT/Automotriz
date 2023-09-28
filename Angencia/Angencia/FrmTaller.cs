@@ -36,5 +36,35 @@ namespace Angencia
         {
             this.Close();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBorrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
