@@ -173,5 +173,15 @@
   <ItemGroup>
     <None Include="Resources\agregar-usuario.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{34f98259-85a2-4d9d-ab74-93e7ed5fff46}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{e81ca43f-632b-4334-abe2-cc4a4655fadc}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
