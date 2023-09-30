@@ -70,6 +70,7 @@
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(190, 26);
             this.TxtUsuario.TabIndex = 2;
+            this.TxtUsuario.Text = "EduardMTT";
             this.TxtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
@@ -91,6 +92,7 @@
             this.TxtClave.PasswordChar = '°';
             this.TxtClave.Size = new System.Drawing.Size(190, 26);
             this.TxtClave.TabIndex = 4;
+            this.TxtClave.Text = "BASEDEDATOS10";
             // 
             // BtnEntrar
             // 
@@ -127,7 +129,7 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // Login
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +145,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "Login";
+            this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

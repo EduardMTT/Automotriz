@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using Entidades;
+using Logica;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +14,11 @@ namespace Angencia
 {
     public partial class FrmLogin : Form
     {
+        LogicaUsuarios Analisis;
         public FrmLogin()
         {
             InitializeComponent();
+            Analisis = new LogicaUsuarios();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -24,9 +28,22 @@ namespace Angencia
 
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
-            Menu Abrir= new Menu();
-            this.Hide();
-            Abrir.Show();
+            bool Sesion = Analisis.VerificarCredenciales(TxtUsuario.Text,TxtClave.Text);
+            if (Sesion == true)
+            {
+                string Usuario = TxtUsuario.Text;
+                Menu Abrir = new Menu(Usuario);
+                Usuarios Datos = new Usuarios();
+                Datos.Usuario= TxtUsuario.Text;
+                Datos.Admin = Analisis.VerificarNivel(Datos);
+                if (Datos.Admin == "SI")
+                {
+                    MessageBox.Show("BIENVENIDO ADMINISTRADOR","Sesion Iniciada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                this.Hide();
+                Abrir.Show();
+            }
+            else { MessageBox.Show("Contraseña o Usuario incorrectos!","Fallo la Sesion",MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
 }

@@ -39,14 +39,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtCodigoBarras = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgRefacciones = new System.Windows.Forms.DataGridView();
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
             this.GrupoDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgRefacciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,15 +168,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo de barras";
             // 
-            // dataGridView1
+            // DgRefacciones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(311, 119);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 491);
-            this.dataGridView1.TabIndex = 10;
+            this.DgRefacciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgRefacciones.Location = new System.Drawing.Point(311, 119);
+            this.DgRefacciones.Name = "DgRefacciones";
+            this.DgRefacciones.RowHeadersWidth = 62;
+            this.DgRefacciones.RowTemplate.Height = 28;
+            this.DgRefacciones.Size = new System.Drawing.Size(796, 491);
+            this.DgRefacciones.TabIndex = 10;
             // 
             // BtnCerrar
             // 
@@ -247,13 +247,14 @@
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnBorrar);
             this.Controls.Add(this.GrupoDatos);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DgRefacciones);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRefacciones";
             this.Text = "Refacciones";
+            this.Load += new System.EventHandler(this.FrmRefacciones_Load);
             this.GrupoDatos.ResumeLayout(false);
             this.GrupoDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgRefacciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -278,6 +279,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtCodigoBarras;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgRefacciones;
     }
 }

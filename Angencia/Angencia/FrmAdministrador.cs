@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace Angencia
 {
     public partial class FrmAdministrador : Form
     {
+        LogicaUsuarios Analisis;
         public FrmAdministrador()
         {
             InitializeComponent();
+            Analisis = new LogicaUsuarios();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,6 +29,19 @@ namespace Angencia
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void LlenarHerramientas()
+        {
+            DgUsuarios.DataSource = Analisis.ObtenerDatos();
+        }
+        private void FrmAdministrador_Load(object sender, EventArgs e)
+        {
+            LlenarHerramientas();
         }
     }
 }

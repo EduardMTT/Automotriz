@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace Angencia
 {
     public partial class FrmTaller : Form
     {
+        LogicaHerramientas Analisis;
         public FrmTaller()
         {
             InitializeComponent();
+            Analisis = new LogicaHerramientas();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -65,6 +68,14 @@ namespace Angencia
         private void BtnBorrar_Click(object sender, EventArgs e)
         {
 
+        }
+        private void LlenarHerramientas()
+        {
+            DgHerramientas.DataSource = Analisis.ObtenerDatos();
+        }
+        private void FrmTaller_Load(object sender, EventArgs e)
+        {
+            LlenarHerramientas();
         }
     }
 }
