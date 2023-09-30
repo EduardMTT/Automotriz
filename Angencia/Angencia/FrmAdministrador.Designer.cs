@@ -34,6 +34,9 @@
             this.BtnEditar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.GrupoDatos = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.TxtPass = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
@@ -52,9 +55,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgUsuarios)).BeginInit();
             this.GrupoDatos.SuspendLayout();
             this.SuspendLayout();
@@ -144,6 +144,36 @@
             this.GrupoDatos.TabIndex = 7;
             this.GrupoDatos.TabStop = false;
             this.GrupoDatos.Text = "Datos y Permisos";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(258, 480);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(153, 27);
+            this.checkBox1.TabIndex = 20;
+            this.checkBox1.Text = "Administrador";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(258, 49);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(144, 36);
+            this.textBox1.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(233, 23);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(183, 23);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Fecha de Nacimiento";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // TxtPass
             // 
@@ -317,36 +347,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(258, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 36);
-            this.textBox1.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(233, 23);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(183, 23);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Fecha de Nacimiento";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(258, 480);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(153, 27);
-            this.checkBox1.TabIndex = 20;
-            this.checkBox1.Text = "Administrador";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // FrmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -364,6 +364,7 @@
             this.Name = "FrmAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrador";
+            this.Load += new System.EventHandler(this.FrmAdministrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgUsuarios)).EndInit();
             this.GrupoDatos.ResumeLayout(false);
             this.GrupoDatos.PerformLayout();

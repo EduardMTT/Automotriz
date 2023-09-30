@@ -16,6 +16,32 @@ namespace ConexionBD
         {
             Conectar= new Conexion("localhost", "root", "agenciaautos", 3306);
         }
+        public List<Usuarios> ObtenerUsuarios()
+        {
+            var ListaUsuarios = new List<Usuarios>();
+            var TABLA = new DataTable();
+            var Consulta = string.Format("SELECT * FROM Usuarios");
+            TABLA = Conectar.ObtenerDatos(Consulta);
+            foreach (DataRow Fila in TABLA.Rows)
+            {
+                var Usuario = new Usuarios()
+                {
+                    Nombre = Fila["Nombre"].ToString(),
+                    ApellidoP = Fila["ApellidoP"].ToString(),
+                    ApellidoM = Fila["ApellidoM"].ToString(),
+                    FechadeNacimiento = Fila["FechaNacimiento"].ToString(),
+                    Usuario = Fila["Usuario"].ToString(),
+                    Clave = Fila["Clave"].ToString(),
+                    RFC = Fila["RFC"].ToString(),
+                    PCA = Fila["PCA"].ToString(),
+                    PE = Fila["PE"].ToString(),
+                    PL = Fila["PL"].ToString(),
+                    Admin = Fila["Admin"].ToString()
+                };
+                ListaUsuarios.Add(Usuario);
+            }
+            return ListaUsuarios;
+        }
         public int Comprobacion(string Usuario, string Password)
         {
             Conectar.Enlace.Open();

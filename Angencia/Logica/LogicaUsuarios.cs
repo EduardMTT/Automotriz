@@ -16,6 +16,10 @@ namespace Logica
         {
             MTT= new AccesoUsuarios();
         }
+        public List<Usuarios> ObtenerDatos()
+        {
+            return MTT.ObtenerUsuarios();
+        }
         public string VerificarNivel(Usuarios ListaUsuarios)
         {
             return MTT.Permisos(ListaUsuarios);
