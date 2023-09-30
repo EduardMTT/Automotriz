@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoHerramientas.cs" />
+    <Compile Include="AccesoRefacciones.cs" />
     <Compile Include="AccesoUsuarios.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
