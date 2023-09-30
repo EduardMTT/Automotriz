@@ -5,6 +5,7 @@ using ConexionBD;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using Entidades;
 
 namespace Logica
 {
@@ -14,6 +15,14 @@ namespace Logica
         public LogicaUsuarios() 
         {
             MTT= new AccesoUsuarios();
+        }
+        public string VerificarNivel(Usuarios ListaUsuarios)
+        {
+            return MTT.Permisos(ListaUsuarios);
+        }
+        public string ObtenerNombre(string Usuario)
+        {
+            return MTT.Informacion(Usuario);
         }
         public bool VerificarCredenciales(string Usuario, string Clave)
         {

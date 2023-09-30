@@ -31,7 +31,15 @@ namespace Angencia
             bool Sesion = Analisis.VerificarCredenciales(TxtUsuario.Text,TxtClave.Text);
             if (Sesion == true)
             {
-                Menu Abrir = new Menu();
+                string Usuario = TxtUsuario.Text;
+                Menu Abrir = new Menu(Usuario);
+                Usuarios Datos = new Usuarios();
+                Datos.Usuario= TxtUsuario.Text;
+                Datos.Admin = Analisis.VerificarNivel(Datos);
+                if (Datos.Admin == "SI")
+                {
+                    MessageBox.Show("BIENVENIDO ADMINISTRADOR","Sesion Iniciada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 this.Hide();
                 Abrir.Show();
             }

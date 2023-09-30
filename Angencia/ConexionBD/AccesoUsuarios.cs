@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using Entidades;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,37 @@ namespace ConexionBD
             MySqlCommand Comando = new MySqlCommand(Consulta,Conectar.Enlace);
             int Cuenta = Convert.ToInt32(Comando.ExecuteScalar());
             Conectar.Enlace.Close();
-            return Cuenta;
+            return Cuenta;   
+        }
+        public string Informacion(string Usuario)
+        {
+            string Resultado = "";
+            Conectar.Enlace.Open();
+            string Consulta = string.Format("SELECT Nombre FROM Usuarios WHERE Usuario = '{0}'",Usuario);
+            MySqlCommand Comando = new MySqlCommand(Consulta, Conectar.Enlace);
+            MySqlDataReader Lector = Comando.ExecuteReader();
+            if (Lector.HasRows)
+            {
+                Lector.Read();
+                Resultado = Lector["Nombre"].ToString();
+            }
+            Conectar.Enlace.Close();
+            return Resultado;
+        }
+        public string Permisos(Usuarios ListaUsuario)
+        {
+            string Resultado="";
+            Conectar.Enlace.Open();
+            string Consulta = string.Format("SELECT Admin FROM Usuarios WHERE Usuario='{0}'",ListaUsuario.Usuario);
+            MySqlCommand Comando = new MySqlCommand(Consulta, Conectar.Enlace);
+            MySqlDataReader Lector = Comando.ExecuteReader();
+            if (Lector.HasRows)
+            {
+                Lector.Read();
+                Resultado= Lector["Admin"].ToString();
+            }
+            Conectar.Enlace.Close();
+            return Resultado;
             
         }
     }

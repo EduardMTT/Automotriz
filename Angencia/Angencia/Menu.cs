@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace Angencia
 {
     public partial class Menu : Form
     {
-        public Menu()
+        public string User = "";
+        LogicaUsuarios JalarInformacion;
+        public Menu(string Usuario)
         {
             InitializeComponent();
+            User= Usuario;
+            JalarInformacion = new LogicaUsuarios();
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
@@ -88,6 +94,19 @@ namespace Angencia
         {
             FrmAdministrador Abrir = new FrmAdministrador();
             Abrir.ShowDialog();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            UserName.Text = JalarInformacion.ObtenerNombre(User);
+            Usuarios Datos= new Usuarios();
+            Datos.Usuario = User;
+            Datos.Admin = JalarInformacion.VerificarNivel(Datos);
+            if (Datos.Admin == "SI")
+            {
+                BtnAdmin.Enabled = true;
+            }
+            else { BtnAdmin.Enabled = false; }
         }
     }
 }
