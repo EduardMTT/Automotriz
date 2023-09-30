@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgHerramientas = new System.Windows.Forms.DataGridView();
             this.GrupoDatos = new System.Windows.Forms.GroupBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
@@ -47,21 +47,21 @@
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgHerramientas)).BeginInit();
             this.GrupoDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DgHerramientas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(321, 127);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 491);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.DgHerramientas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgHerramientas.Location = new System.Drawing.Point(321, 127);
+            this.DgHerramientas.Name = "DgHerramientas";
+            this.DgHerramientas.RowHeadersWidth = 62;
+            this.DgHerramientas.RowTemplate.Height = 28;
+            this.DgHerramientas.Size = new System.Drawing.Size(796, 491);
+            this.DgHerramientas.TabIndex = 1;
+            this.DgHerramientas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // GrupoDatos
             // 
@@ -278,11 +278,12 @@
             this.Controls.Add(this.BtnEditar);
             this.Controls.Add(this.BtnBorrar);
             this.Controls.Add(this.GrupoDatos);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DgHerramientas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTaller";
             this.Text = "FrmTaller";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmTaller_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgHerramientas)).EndInit();
             this.GrupoDatos.ResumeLayout(false);
             this.GrupoDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -292,7 +293,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgHerramientas;
         private System.Windows.Forms.GroupBox GrupoDatos;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label label2;

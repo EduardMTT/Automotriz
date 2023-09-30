@@ -38,5 +38,27 @@ namespace ConexionBD
                 Console.WriteLine("error al ejecutar la consulta: ", ex.Message);
             }
         }
+        public DataTable ObtenerDatos(string consulta)
+        {
+            DataTable tabla = new DataTable();
+            try
+            {
+                Enlace.Open();
+                using (MySqlCommand comando = new MySqlCommand(consulta, Enlace))
+                {
+                    using (MySqlDataAdapter adaptador = new MySqlDataAdapter(comando))
+                    {
+                        adaptador.Fill(tabla);
+                        Console.WriteLine("consulta ejecutada correctamente");
+                    }
+                }
+                Enlace.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("error al ejecutar la consulta: ", ex.Message);
+            }
+            return tabla;
+        }
     }
 }
