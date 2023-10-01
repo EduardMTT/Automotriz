@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class Herramientas
     {
+        private string _Codigo;
         private string _Nombre;
         private double _Medida;
         private string _Marca;
@@ -17,5 +18,6 @@ namespace Entidades
         public double Medida { get => _Medida; set => _Medida = value; }
         public string Marca { get => _Marca; set => _Marca = value; }
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
+        public string Codigo { get => _Codigo; set => _Codigo = value; }
     }
 }

@@ -93,12 +93,13 @@
             this.BtnGuardar.BackColor = System.Drawing.Color.DarkBlue;
             this.BtnGuardar.Font = new System.Drawing.Font("Yu Gothic Medium", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(105, 453);
+            this.BtnGuardar.Location = new System.Drawing.Point(81, 453);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(98, 32);
+            this.BtnGuardar.Size = new System.Drawing.Size(122, 32);
             this.BtnGuardar.TabIndex = 10;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // TxtDescripcion
             // 
