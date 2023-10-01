@@ -69,8 +69,7 @@
             this.TxtUsuario.Location = new System.Drawing.Point(172, 224);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(190, 26);
-            this.TxtUsuario.TabIndex = 2;
-            this.TxtUsuario.Text = "EduardMTT";
+            this.TxtUsuario.TabIndex = 1;
             this.TxtUsuario.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
@@ -91,8 +90,7 @@
             this.TxtClave.Name = "TxtClave";
             this.TxtClave.PasswordChar = '°';
             this.TxtClave.Size = new System.Drawing.Size(190, 26);
-            this.TxtClave.TabIndex = 4;
-            this.TxtClave.Text = "BASEDEDATOS10";
+            this.TxtClave.TabIndex = 2;
             // 
             // BtnEntrar
             // 
@@ -102,7 +100,7 @@
             this.BtnEntrar.Location = new System.Drawing.Point(225, 400);
             this.BtnEntrar.Name = "BtnEntrar";
             this.BtnEntrar.Size = new System.Drawing.Size(87, 32);
-            this.BtnEntrar.TabIndex = 5;
+            this.BtnEntrar.TabIndex = 3;
             this.BtnEntrar.Text = "Entrar";
             this.BtnEntrar.UseVisualStyleBackColor = false;
             this.BtnEntrar.Click += new System.EventHandler(this.BtnEntrar_Click);
