@@ -26,6 +26,7 @@ namespace ConexionBD
             {
                 var Usuario = new Usuarios()
                 {
+                    ID = int.Parse(Fila["ID"].ToString()),
                     Nombre = Fila["Nombre"].ToString(),
                     ApellidoP = Fila["ApellidoP"].ToString(),
                     ApellidoM = Fila["ApellidoM"].ToString(),
@@ -37,6 +38,27 @@ namespace ConexionBD
                     PE = Fila["PE"].ToString(),
                     PL = Fila["PL"].ToString(),
                     Admin = Fila["Admin"].ToString()
+                };
+                ListaUsuarios.Add(Usuario);
+            }
+            return ListaUsuarios;
+        }
+        public List<Usuarios> ObtenerUsuario(string Nombre)
+        {
+            var ListaUsuarios = new List<Usuarios>();
+            var TABLA = new DataTable();
+            var Consulta = string.Format(string.Format("SELECT ID, Nombre, Usuario, PCA, PE, PL FROM usuarios WHERE Nombre='{0}'", Nombre));
+            TABLA = Conectar.ObtenerDatos(Consulta);
+            foreach (DataRow Fila in TABLA.Rows)
+            {
+                var Usuario = new Usuarios()
+                {
+                    ID = int.Parse(Fila["ID"].ToString()),
+                    Nombre = Fila["Nombre"].ToString(),
+                    Usuario = Fila["Usuario"].ToString(),
+                    PCA = Fila["PCA"].ToString(),
+                    PE = Fila["PE"].ToString(),
+                    PL = Fila["PL"].ToString()
                 };
                 ListaUsuarios.Add(Usuario);
             }

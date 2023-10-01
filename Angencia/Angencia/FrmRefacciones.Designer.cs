@@ -45,6 +45,7 @@
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
+            this.Comprobacion = new System.Windows.Forms.Label();
             this.GrupoDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgRefacciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -234,12 +235,22 @@
             this.BtnBorrar.TabIndex = 12;
             this.BtnBorrar.UseVisualStyleBackColor = false;
             // 
+            // Comprobacion
+            // 
+            this.Comprobacion.AutoSize = true;
+            this.Comprobacion.Location = new System.Drawing.Point(740, 13);
+            this.Comprobacion.Name = "Comprobacion";
+            this.Comprobacion.Size = new System.Drawing.Size(51, 20);
+            this.Comprobacion.TabIndex = 18;
+            this.Comprobacion.Text = "label3";
+            // 
             // FrmRefacciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1119, 620);
+            this.Controls.Add(this.Comprobacion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.pictureBox1);
@@ -280,5 +291,6 @@
         private System.Windows.Forms.TextBox TxtCodigoBarras;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DgRefacciones;
+        private System.Windows.Forms.Label Comprobacion;
     }
 }

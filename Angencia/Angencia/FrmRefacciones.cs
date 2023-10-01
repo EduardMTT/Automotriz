@@ -15,10 +15,13 @@ namespace Angencia
     public partial class FrmRefacciones : Form
     {
         LogicaRefacciones Analisis;
-        public FrmRefacciones()
+        public string Username = "";
+        public FrmRefacciones(string Usuario)
         {
             InitializeComponent();
             Analisis = new LogicaRefacciones();
+            Username = Usuario;
+            Comprobacion.Text = Username;
         }
 
         private void GrupoDatos_Enter(object sender, EventArgs e)

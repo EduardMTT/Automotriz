@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class Usuarios
     {
+        private int _ID;
         private string _Nombre;
         private string _ApellidoP;
         private string _ApellidoM;
@@ -31,5 +32,6 @@ namespace Entidades
         public string PE { get => _PE; set => _PE = value; }
         public string PL { get => _PL; set => _PL = value; }
         public string Admin { get => _Admin; set => _Admin = value; }
+        public int ID { get => _ID; set => _ID = value; }
     }
 }

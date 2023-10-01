@@ -38,7 +38,7 @@ namespace Angencia
             if (Opcion == 1)
             {
                 // Crear una instancia del formulario hijo
-                FrmTaller Abrir = new FrmTaller();
+                FrmTaller Abrir = new FrmTaller(UserName.Text);
                 // Establecer el formulario hijo como el hijo del contenedor
                 Abrir.TopLevel = false;
                 Abrir.Dock = DockStyle.Fill; // Esto hace que el formulario hijo ocupe todo el espacio del contenedor
@@ -48,7 +48,7 @@ namespace Angencia
             }
             if (Opcion == 2)
             {
-                FrmRefacciones Abrir = new FrmRefacciones();
+                FrmRefacciones Abrir = new FrmRefacciones(UserName.Text);
                 Abrir.TopLevel = false;
                 Abrir.Dock = DockStyle.Fill;
                 PanelShow.Controls.Add(Abrir);

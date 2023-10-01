@@ -45,5 +45,10 @@ namespace Angencia
             }
             else { MessageBox.Show("Contraseña o Usuario incorrectos!","Fallo la Sesion",MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,9 +11,15 @@ namespace Logica
     public class LogicaHerramientas
     {
         AccesoHerramientas MTT;
+        AccesoUsuarios PERMISOS;
         public LogicaHerramientas()
         {
             MTT = new AccesoHerramientas();
+            PERMISOS = new AccesoUsuarios();
+        }
+        public List<Usuarios> OperacionesPermitidas(string Nombre)
+        {
+            return PERMISOS.ObtenerUsuario(Nombre);
         }
         public void ActualizarHerramienta(Herramientas herramienta)
         {
