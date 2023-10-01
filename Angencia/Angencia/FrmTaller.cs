@@ -67,6 +67,8 @@ namespace Angencia
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            BtnBorrar.Enabled = false;
+            BtnEditar.Enabled = false;
             DgHerramientas.DataSource = null;
             BtnGuardar.Text = "Guardar";
             VaciarCajas();
@@ -83,6 +85,8 @@ namespace Angencia
             }
             else
             {
+                BtnBorrar.Enabled = false;
+                BtnAgregar.Enabled = false;
                 BtnGuardar.Text = "Actualizar";
                 GrupoDatos.Enabled = true;
                 Bandera = "A";
@@ -165,25 +169,35 @@ namespace Angencia
         }
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            ListaH.Codigo = TxtCodigo.Text;
-            ListaH.Nombre = TxtNombre.Text;
-            ListaH.Medida = double.Parse(TxtMedida.Text);
-            ListaH.Marca = TxtMarca.Text;
-            ListaH.Descripcion = TxtDescripcion.Text;
-            if (Bandera.Equals("G"))
+            try
             {
-                Analisis.GuardarHerramienta(ListaH);
-                MessageBox.Show("Se guardo la herramienta exitosamente!","Operacion",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ListaH.Codigo = TxtCodigo.Text;
+                ListaH.Nombre = TxtNombre.Text;
+                ListaH.Medida = double.Parse(TxtMedida.Text);
+                ListaH.Marca = TxtMarca.Text;
+                ListaH.Descripcion = TxtDescripcion.Text;
+                if (Bandera.Equals("G"))
+                {
+                    Analisis.GuardarHerramienta(ListaH);
+                    MessageBox.Show("Se guardo la herramienta exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BtnEditar.Enabled = true;
+                }
+                if (Bandera.Equals("A"))
+                {
+                    Analisis.ActualizarHerramienta(ListaH);
+                    MessageBox.Show("Se actualizo la herramienta exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BtnAgregar.Enabled = true;
+                }
+                BtnBorrar.Enabled = true;
+                DgHerramientas.DataSource = null;
+                LlenarHerramientas();
+                GrupoDatos.Enabled = false;
+                VaciarCajas();
             }
-            if (Bandera.Equals("A"))
+            catch
             {
-                Analisis.ActualizarHerramienta(ListaH);
-                MessageBox.Show("Se actualizo la herramienta exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("El dato en medida tiene un formato incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            DgHerramientas.DataSource = null;
-            LlenarHerramientas();
-            GrupoDatos.Enabled = false;
-            VaciarCajas();
         }
     }
 }

@@ -79,8 +79,8 @@
             this.BtnAdmin.Image = global::Angencia.Properties.Resources.corona;
             this.BtnAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAdmin.Name = "BtnAdmin";
-            this.BtnAdmin.Size = new System.Drawing.Size(154, 29);
-            this.BtnAdmin.Text = "Administrador";
+            this.BtnAdmin.Size = new System.Drawing.Size(108, 29);
+            this.BtnAdmin.Text = "Usuarios";
             this.BtnAdmin.ToolTipText = "Creacion de usuarios y control de modulos";
             this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
             // 

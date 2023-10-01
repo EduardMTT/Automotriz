@@ -156,7 +156,7 @@
             this.CBAdmin.Location = new System.Drawing.Point(258, 480);
             this.CBAdmin.Name = "CBAdmin";
             this.CBAdmin.Size = new System.Drawing.Size(153, 27);
-            this.CBAdmin.TabIndex = 20;
+            this.CBAdmin.TabIndex = 12;
             this.CBAdmin.Text = "Administrador";
             this.CBAdmin.UseVisualStyleBackColor = true;
             // 
@@ -166,7 +166,7 @@
             this.TxtF.Location = new System.Drawing.Point(258, 49);
             this.TxtF.Name = "TxtF";
             this.TxtF.Size = new System.Drawing.Size(144, 36);
-            this.TxtF.TabIndex = 19;
+            this.TxtF.TabIndex = 2;
             // 
             // label9
             // 
@@ -185,7 +185,7 @@
             this.TxtPass.Location = new System.Drawing.Point(103, 402);
             this.TxtPass.Name = "TxtPass";
             this.TxtPass.Size = new System.Drawing.Size(222, 36);
-            this.TxtPass.TabIndex = 17;
+            this.TxtPass.TabIndex = 8;
             // 
             // label8
             // 
@@ -203,17 +203,17 @@
             this.TxtNombre.Location = new System.Drawing.Point(120, 111);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(282, 36);
-            this.TxtNombre.TabIndex = 15;
+            this.TxtNombre.TabIndex = 3;
             // 
             // BtnGuardar
             // 
             this.BtnGuardar.BackColor = System.Drawing.Color.MidnightBlue;
             this.BtnGuardar.Font = new System.Drawing.Font("Yu Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnGuardar.Location = new System.Drawing.Point(157, 542);
+            this.BtnGuardar.Location = new System.Drawing.Point(137, 542);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(126, 42);
-            this.BtnGuardar.TabIndex = 14;
+            this.BtnGuardar.Size = new System.Drawing.Size(146, 42);
+            this.BtnGuardar.TabIndex = 13;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
@@ -224,7 +224,7 @@
             this.TxtRFC.Location = new System.Drawing.Point(61, 255);
             this.TxtRFC.Name = "TxtRFC";
             this.TxtRFC.Size = new System.Drawing.Size(222, 36);
-            this.TxtRFC.TabIndex = 13;
+            this.TxtRFC.TabIndex = 6;
             // 
             // TxtApP
             // 
@@ -232,7 +232,7 @@
             this.TxtApP.Location = new System.Drawing.Point(14, 160);
             this.TxtApP.Name = "TxtApP";
             this.TxtApP.Size = new System.Drawing.Size(186, 36);
-            this.TxtApP.TabIndex = 12;
+            this.TxtApP.TabIndex = 4;
             // 
             // TxtApM
             // 
@@ -240,15 +240,15 @@
             this.TxtApM.Location = new System.Drawing.Point(216, 160);
             this.TxtApM.Name = "TxtApM";
             this.TxtApM.Size = new System.Drawing.Size(186, 36);
-            this.TxtApM.TabIndex = 11;
+            this.TxtApM.TabIndex = 5;
             // 
             // TxtUsuario
             // 
             this.TxtUsuario.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(148, 337);
+            this.TxtUsuario.Location = new System.Drawing.Point(137, 336);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(146, 36);
-            this.TxtUsuario.TabIndex = 10;
+            this.TxtUsuario.TabIndex = 7;
             // 
             // TxtID
             // 
@@ -256,7 +256,7 @@
             this.TxtID.Location = new System.Drawing.Point(40, 31);
             this.TxtID.Name = "TxtID";
             this.TxtID.Size = new System.Drawing.Size(117, 36);
-            this.TxtID.TabIndex = 9;
+            this.TxtID.TabIndex = 1;
             // 
             // CBEliminar
             // 
@@ -265,7 +265,7 @@
             this.CBEliminar.Location = new System.Drawing.Point(14, 480);
             this.CBEliminar.Name = "CBEliminar";
             this.CBEliminar.Size = new System.Drawing.Size(105, 27);
-            this.CBEliminar.TabIndex = 8;
+            this.CBEliminar.TabIndex = 10;
             this.CBEliminar.Text = "Eliminar";
             this.CBEliminar.UseVisualStyleBackColor = true;
             // 
@@ -276,7 +276,7 @@
             this.CBCrearyEditar.Location = new System.Drawing.Point(14, 513);
             this.CBCrearyEditar.Name = "CBCrearyEditar";
             this.CBCrearyEditar.Size = new System.Drawing.Size(150, 27);
-            this.CBCrearyEditar.TabIndex = 7;
+            this.CBCrearyEditar.TabIndex = 11;
             this.CBCrearyEditar.Text = "Crear y Editar";
             this.CBCrearyEditar.UseVisualStyleBackColor = true;
             // 
@@ -287,7 +287,7 @@
             this.CBLeer.Location = new System.Drawing.Point(14, 447);
             this.CBLeer.Name = "CBLeer";
             this.CBLeer.Size = new System.Drawing.Size(74, 27);
-            this.CBLeer.TabIndex = 6;
+            this.CBLeer.TabIndex = 9;
             this.CBLeer.Text = "Leer";
             this.CBLeer.UseVisualStyleBackColor = true;
             // 
@@ -305,7 +305,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(181, 307);
+            this.label6.Location = new System.Drawing.Point(174, 306);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 23);
             this.label6.TabIndex = 4;

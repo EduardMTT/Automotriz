@@ -25,7 +25,6 @@ namespace Angencia
             ListaR = new Refacciones();
             Analisis = new LogicaRefacciones();
             Username = Usuario;
-            Comprobacion.Text = Username;
         }
 
         private void GrupoDatos_Enter(object sender, EventArgs e)
@@ -54,6 +53,8 @@ namespace Angencia
         }
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            BtnEditar.Enabled = false;
+            BtnBorrar.Enabled = false;
             DgRefacciones.DataSource = null;
             BtnGuardar.Text = "Guardar";
             VaciarCajas();
@@ -71,12 +72,15 @@ namespace Angencia
             {
                 Analisis.GuardarHerramienta(ListaR);
                 MessageBox.Show("Se guardo la refaccion exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BtnEditar.Enabled = true;
             }
             if (Bandera.Equals("A"))
             {
                 Analisis.ActualizarHerramienta(ListaR);
                 MessageBox.Show("Se actualizo la refaccion exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BtnAgregar.Enabled = true;
             }
+            BtnBorrar.Enabled = true;
             DgRefacciones.DataSource = null;
             LlenarRefacciones();
             GrupoDatos.Enabled = false;
@@ -93,10 +97,10 @@ namespace Angencia
             }
             else
             {
-                if (MessageBox.Show("Estas seguro de eliminar la herramienta: " + TxtNombre.Text, "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Estas seguro de eliminar la refaccion: " + TxtNombre.Text, "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     Analisis.EliminarRefaccion(Codigo);
-                    MessageBox.Show("Se elimino la herramienta exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se elimino la refaccion exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DgRefacciones.DataSource = null;
                     LlenarRefacciones();
                     VaciarCajas();
@@ -121,6 +125,8 @@ namespace Angencia
             }
             else
             {
+                BtnAgregar.Enabled = false;
+                BtnBorrar.Enabled = false;
                 BtnGuardar.Text = "Actualizar";
                 GrupoDatos.Enabled = true;
                 Bandera = "A";

@@ -43,9 +43,8 @@
             this.BtnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
-            this.Comprobacion = new System.Windows.Forms.Label();
+            this.BtnEditar = new System.Windows.Forms.Button();
             this.GrupoDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgRefacciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,7 +91,7 @@
             this.BtnGuardar.Location = new System.Drawing.Point(105, 453);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(98, 32);
-            this.BtnGuardar.TabIndex = 10;
+            this.BtnGuardar.TabIndex = 5;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
@@ -104,7 +103,7 @@
             this.TxtDescripcion.Multiline = true;
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(283, 122);
-            this.TxtDescripcion.TabIndex = 9;
+            this.TxtDescripcion.TabIndex = 4;
             // 
             // label5
             // 
@@ -122,7 +121,7 @@
             this.TxtMarca.Location = new System.Drawing.Point(7, 220);
             this.TxtMarca.Name = "TxtMarca";
             this.TxtMarca.Size = new System.Drawing.Size(165, 40);
-            this.TxtMarca.TabIndex = 7;
+            this.TxtMarca.TabIndex = 3;
             // 
             // label4
             // 
@@ -140,7 +139,7 @@
             this.TxtNombre.Location = new System.Drawing.Point(6, 122);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(291, 40);
-            this.TxtNombre.TabIndex = 3;
+            this.TxtNombre.TabIndex = 2;
             // 
             // label2
             // 
@@ -216,18 +215,6 @@
             this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // BtnEditar
-            // 
-            this.BtnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnEditar.BackgroundImage = global::Angencia.Properties.Resources.editar;
-            this.BtnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnEditar.Location = new System.Drawing.Point(740, 66);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(48, 47);
-            this.BtnEditar.TabIndex = 13;
-            this.BtnEditar.UseVisualStyleBackColor = false;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
             // BtnBorrar
             // 
             this.BtnBorrar.BackColor = System.Drawing.Color.Transparent;
@@ -240,14 +227,17 @@
             this.BtnBorrar.UseVisualStyleBackColor = false;
             this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
-            // Comprobacion
+            // BtnEditar
             // 
-            this.Comprobacion.AutoSize = true;
-            this.Comprobacion.Location = new System.Drawing.Point(740, 13);
-            this.Comprobacion.Name = "Comprobacion";
-            this.Comprobacion.Size = new System.Drawing.Size(51, 20);
-            this.Comprobacion.TabIndex = 18;
-            this.Comprobacion.Text = "label3";
+            this.BtnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnEditar.BackgroundImage = global::Angencia.Properties.Resources.editar;
+            this.BtnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnEditar.Location = new System.Drawing.Point(740, 66);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(48, 47);
+            this.BtnEditar.TabIndex = 13;
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // FrmRefacciones
             // 
@@ -255,7 +245,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(1119, 620);
-            this.Controls.Add(this.Comprobacion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnCerrar);
             this.Controls.Add(this.pictureBox1);
@@ -283,7 +272,6 @@
         private System.Windows.Forms.Button BtnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtnAgregar;
-        private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnBorrar;
         private System.Windows.Forms.GroupBox GrupoDatos;
         private System.Windows.Forms.Button BtnGuardar;
@@ -296,6 +284,6 @@
         private System.Windows.Forms.TextBox TxtCodigoBarras;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DgRefacciones;
-        private System.Windows.Forms.Label Comprobacion;
+        private System.Windows.Forms.Button BtnEditar;
     }
 }

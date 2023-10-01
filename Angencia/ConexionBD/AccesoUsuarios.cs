@@ -31,7 +31,7 @@ namespace ConexionBD
         {
             string Consulta = string.Format("UPDATE Usuarios SET ID='{0}', Nombre='{1}', ApellidoP='{2}', ApellidoM='{3}', FechaNacimiento='{4}', Usuario='{5}'," +
                 "Clave='{6}', RFC='{7}', PCA='{8}', PE='{9}', PL='{10}', Admin='{11}' WHERE ID='{12}'", usuario.ID, usuario.Nombre, usuario.ApellidoP, usuario.ApellidoM, usuario.FechadeNacimiento, usuario.Usuario,
-                usuario.Clave, usuario.RFC, usuario.PCA, usuario.PE, usuario.PL, usuario.Admin);
+                usuario.Clave, usuario.RFC, usuario.PCA, usuario.PE, usuario.PL, usuario.Admin, usuario.ID);
             Conectar.EjecutarConsulta(Consulta);
         }
         public List<Usuarios> ObtenerUsuarios()

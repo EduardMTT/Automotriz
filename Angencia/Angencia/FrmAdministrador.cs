@@ -29,6 +29,8 @@ namespace Angencia
 
         private void button1_Click(object sender, EventArgs e)
         {
+            BtnBorrar.Enabled=false;
+            BtnEditar.Enabled=false;
             DgUsuarios.DataSource = null;
             BtnGuardar.Text = "Guardar";
             VaciarCajas();
@@ -60,25 +62,19 @@ namespace Angencia
             try
             {
                 int Codigo = int.Parse(TxtID.Text);
-                if (Codigo.Equals(""))
+                if (MessageBox.Show("Estas seguro de eliminar este usuario: " + TxtNombre.Text, "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show("No hay un registro seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Analisis.EliminarUsuario(Codigo);
+                    MessageBox.Show("Se elimino el usuario exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DgUsuarios.DataSource = null;
+                    LlenarUsuarios();
+                    VaciarCajas();
                 }
-                else
-                {
-                    if (MessageBox.Show("Estas seguro de eliminar este usuario: " + TxtNombre.Text, "Confirmacion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    {
-                        Analisis.EliminarUsuario(Codigo);
-                        MessageBox.Show("Se elimino el usuario exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DgUsuarios.DataSource = null;
-                        LlenarUsuarios();
-                        VaciarCajas();
-                    }
-                }
+            
             }
             catch
             {
-                MessageBox.Show("Probablemente no has elegido un registro a eliminar","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No has elegido un registro a eliminar","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public void ComprobarPermisos()
@@ -125,6 +121,8 @@ namespace Angencia
             }
             else
             {
+                BtnBorrar.Enabled = false;
+                BtnAgregarUsuario.Enabled = false;
                 BtnGuardar.Text = "Actualizar";
                 GrupoDatos.Enabled = true;
                 Bandera = "A";
@@ -134,53 +132,61 @@ namespace Angencia
         {
             DgUsuarios.DataSource = Analisis.ObtenerDatos();
         }
+        public void LlenarEntidad()
+        {
+            ListaU.Nombre = TxtNombre.Text;
+            ListaU.ApellidoP = TxtApP.Text;
+            ListaU.ApellidoM = TxtApM.Text;
+            ListaU.FechadeNacimiento = TxtF.Text;
+            ListaU.Usuario = TxtUsuario.Text;
+            ListaU.Clave = TxtPass.Text;
+            ListaU.RFC = TxtRFC.Text;
+            if (CBCrearyEditar.Checked)
+            {
+                ListaU.PCA = "SI";
+            }
+            else { ListaU.PCA = "NO"; }
+            if (CBEliminar.Checked)
+            {
+                ListaU.PE = "SI";
+            }
+            else { ListaU.PE = "NO"; }
+            if (CBLeer.Checked)
+            {
+                ListaU.PL = "SI";
+            }
+            else { ListaU.PL = "NO"; }
+            if (CBAdmin.Checked)
+            {
+                ListaU.Admin = "SI";
+            }
+            else { ListaU.Admin = "NO"; }
+        }
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            LlenarEntidad();
             if (Bandera.Equals("G"))
             {
-                ListaU.Nombre = TxtNombre.Text;
-                ListaU.ApellidoP = TxtApP.Text;
-                ListaU.ApellidoM = TxtApM.Text;
-                ListaU.FechadeNacimiento = TxtF.Text;
-                ListaU.Usuario = TxtUsuario.Text;
-                ListaU.Clave = TxtPass.Text;
-                ListaU.RFC = TxtRFC.Text;
-                if (CBCrearyEditar.Checked)
-                {
-                    ListaU.PCA = "SI";
-                }
-                else { ListaU.PCA = "NO"; }
-                if (CBEliminar.Checked)
-                {
-                    ListaU.PE = "SI";
-                }
-                else { ListaU.PE = "NO"; }
-                if (CBLeer.Checked)
-                {
-                    ListaU.PL = "SI";
-                }
-                else { ListaU.PL = "NO"; }
-                if (CBAdmin.Checked)
-                {
-                    ListaU.Admin = "SI";
-                }
-                else { ListaU.Admin = "NO"; }
+                
                 if (Bandera.Equals("G"))
                 {
                     Analisis.GuardarUsuario(ListaU);
                     MessageBox.Show("Se guardo el usuario exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                if (Bandera.Equals("A"))
-                {
-                    Analisis.ActualizarUsuario(ListaU);
-                    MessageBox.Show("Se actualizo el usuario exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                DgUsuarios.DataSource = null;
-                LlenarUsuarios();
-                GrupoDatos.Enabled = false;
-                TxtID.Enabled= true;
-                VaciarCajas();
             }
+            if (Bandera.Equals("A"))
+            {
+
+                ListaU.ID = int.Parse(TxtID.Text);
+                Analisis.ActualizarUsuario(ListaU);
+                MessageBox.Show("Se actualizo el usuario exitosamente!", "Operacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            BtnBorrar.Enabled = true;
+            BtnEditar.Enabled = true;
+            DgUsuarios.DataSource = null;
+            LlenarUsuarios();
+            GrupoDatos.Enabled = false;
+            VaciarCajas();
         }
         public void VaciarCajas()
         {
