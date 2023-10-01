@@ -34,8 +34,8 @@
             this.BtnEditar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.GrupoDatos = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CBAdmin = new System.Windows.Forms.CheckBox();
+            this.TxtF = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.TxtPass = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -69,6 +69,7 @@
             this.DgUsuarios.RowTemplate.Height = 28;
             this.DgUsuarios.Size = new System.Drawing.Size(447, 590);
             this.DgUsuarios.TabIndex = 0;
+            this.DgUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgUsuarios_CellContentClick);
             // 
             // BtnAgregarUsuario
             // 
@@ -90,6 +91,7 @@
             this.BtnBorrar.Size = new System.Drawing.Size(37, 33);
             this.BtnBorrar.TabIndex = 3;
             this.BtnBorrar.UseVisualStyleBackColor = true;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // BtnEditar
             // 
@@ -100,6 +102,7 @@
             this.BtnEditar.Size = new System.Drawing.Size(37, 33);
             this.BtnEditar.TabIndex = 4;
             this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // label2
             // 
@@ -116,8 +119,8 @@
             // GrupoDatos
             // 
             this.GrupoDatos.BackColor = System.Drawing.Color.AliceBlue;
-            this.GrupoDatos.Controls.Add(this.checkBox1);
-            this.GrupoDatos.Controls.Add(this.textBox1);
+            this.GrupoDatos.Controls.Add(this.CBAdmin);
+            this.GrupoDatos.Controls.Add(this.TxtF);
             this.GrupoDatos.Controls.Add(this.label9);
             this.GrupoDatos.Controls.Add(this.TxtPass);
             this.GrupoDatos.Controls.Add(this.label8);
@@ -137,6 +140,7 @@
             this.GrupoDatos.Controls.Add(this.label4);
             this.GrupoDatos.Controls.Add(this.label3);
             this.GrupoDatos.Controls.Add(this.label1);
+            this.GrupoDatos.Enabled = false;
             this.GrupoDatos.Font = new System.Drawing.Font("Yu Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrupoDatos.Location = new System.Drawing.Point(470, 61);
             this.GrupoDatos.Name = "GrupoDatos";
@@ -145,24 +149,24 @@
             this.GrupoDatos.TabStop = false;
             this.GrupoDatos.Text = "Datos y Permisos";
             // 
-            // checkBox1
+            // CBAdmin
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(258, 480);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(153, 27);
-            this.checkBox1.TabIndex = 20;
-            this.checkBox1.Text = "Administrador";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CBAdmin.AutoSize = true;
+            this.CBAdmin.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBAdmin.Location = new System.Drawing.Point(258, 480);
+            this.CBAdmin.Name = "CBAdmin";
+            this.CBAdmin.Size = new System.Drawing.Size(153, 27);
+            this.CBAdmin.TabIndex = 20;
+            this.CBAdmin.Text = "Administrador";
+            this.CBAdmin.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // TxtF
             // 
-            this.textBox1.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(258, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 36);
-            this.textBox1.TabIndex = 19;
+            this.TxtF.Font = new System.Drawing.Font("Yu Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtF.Location = new System.Drawing.Point(258, 49);
+            this.TxtF.Name = "TxtF";
+            this.TxtF.Size = new System.Drawing.Size(144, 36);
+            this.TxtF.TabIndex = 19;
             // 
             // label9
             // 
@@ -212,6 +216,7 @@
             this.BtnGuardar.TabIndex = 14;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // TxtRFC
             // 
@@ -399,8 +404,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Button BtnGuardar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtF;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox CBAdmin;
     }
 }

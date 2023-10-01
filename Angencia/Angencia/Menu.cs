@@ -92,7 +92,7 @@ namespace Angencia
 
         private void BtnAdmin_Click(object sender, EventArgs e)
         {
-            FrmAdministrador Abrir = new FrmAdministrador();
+            FrmAdministrador Abrir = new FrmAdministrador(JalarInformacion.ObtenerNombre(User));
             Abrir.ShowDialog();
         }
 

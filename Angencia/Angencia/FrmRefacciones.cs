@@ -115,8 +115,7 @@ namespace Angencia
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            string Codigo = TxtCodigoBarras.Text;
-            if (Codigo.Equals(""))
+            if (TxtCodigoBarras.Text.Equals(""))
             {
                 MessageBox.Show("No hay un registro seleccionado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -59,7 +59,7 @@
             this.BtnTaller.Image = global::Angencia.Properties.Resources.configuracion;
             this.BtnTaller.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnTaller.Name = "BtnTaller";
-            this.BtnTaller.Size = new System.Drawing.Size(79, 33);
+            this.BtnTaller.Size = new System.Drawing.Size(79, 29);
             this.BtnTaller.Text = "Taller";
             this.BtnTaller.ToolTipText = "Registro de herramientas en el taller";
             this.BtnTaller.Click += new System.EventHandler(this.BtnTaller_Click);
@@ -69,7 +69,7 @@
             this.BtnHerramientas.Image = global::Angencia.Properties.Resources.caja_de_herramientas;
             this.BtnHerramientas.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnHerramientas.Name = "BtnHerramientas";
-            this.BtnHerramientas.Size = new System.Drawing.Size(132, 33);
+            this.BtnHerramientas.Size = new System.Drawing.Size(132, 29);
             this.BtnHerramientas.Text = "Refacciones";
             this.BtnHerramientas.ToolTipText = "Información de las refacciones existentes";
             this.BtnHerramientas.Click += new System.EventHandler(this.BtnHerramientas_Click);
@@ -79,7 +79,7 @@
             this.BtnAdmin.Image = global::Angencia.Properties.Resources.corona;
             this.BtnAdmin.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAdmin.Name = "BtnAdmin";
-            this.BtnAdmin.Size = new System.Drawing.Size(154, 33);
+            this.BtnAdmin.Size = new System.Drawing.Size(154, 29);
             this.BtnAdmin.Text = "Administrador";
             this.BtnAdmin.ToolTipText = "Creacion de usuarios y control de modulos";
             this.BtnAdmin.Click += new System.EventHandler(this.BtnAdmin_Click);
@@ -100,6 +100,7 @@
             // UserName
             // 
             this.UserName.AutoSize = true;
+            this.UserName.BackColor = System.Drawing.Color.White;
             this.UserName.Font = new System.Drawing.Font("Yu Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserName.Location = new System.Drawing.Point(921, 5);
             this.UserName.Name = "UserName";

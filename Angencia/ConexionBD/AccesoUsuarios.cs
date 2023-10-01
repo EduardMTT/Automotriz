@@ -16,6 +16,24 @@ namespace ConexionBD
         {
             Conectar= new Conexion("localhost", "root", "agenciaautos", 3306);
         }
+        public void GuardarUsuario(Usuarios usuario)
+        {
+            string Consulta = string.Format("INSERT INTO Usuarios VALUES(NULL,'{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}');",
+                usuario.Nombre, usuario.ApellidoP, usuario.ApellidoM, usuario.FechadeNacimiento, usuario.Usuario, usuario.Clave, usuario.RFC, usuario.PCA, usuario.PE, usuario.PL, usuario.Admin);
+            Conectar.EjecutarConsulta(Consulta);
+        }
+        public void EliminarUsuario(int ID)
+        {
+            string Consulta = string.Format("DELETE FROM Usuarios WHERE ID={0};", ID);
+            Conectar.EjecutarConsulta(Consulta);
+        }
+        public void ActualizarUsuario(Usuarios usuario)
+        {
+            string Consulta = string.Format("UPDATE Usuarios SET ID='{0}', Nombre='{1}', ApellidoP='{2}', ApellidoM='{3}', FechaNacimiento='{4}', Usuario='{5}'," +
+                "Clave='{6}', RFC='{7}', PCA='{8}', PE='{9}', PL='{10}', Admin='{11}' WHERE ID='{12}'", usuario.ID, usuario.Nombre, usuario.ApellidoP, usuario.ApellidoM, usuario.FechadeNacimiento, usuario.Usuario,
+                usuario.Clave, usuario.RFC, usuario.PCA, usuario.PE, usuario.PL, usuario.Admin);
+            Conectar.EjecutarConsulta(Consulta);
+        }
         public List<Usuarios> ObtenerUsuarios()
         {
             var ListaUsuarios = new List<Usuarios>();
