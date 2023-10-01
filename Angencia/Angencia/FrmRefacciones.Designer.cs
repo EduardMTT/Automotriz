@@ -95,6 +95,7 @@
             this.BtnGuardar.TabIndex = 10;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = false;
+            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // TxtDescripcion
             // 
@@ -178,6 +179,7 @@
             this.DgRefacciones.RowTemplate.Height = 28;
             this.DgRefacciones.Size = new System.Drawing.Size(796, 491);
             this.DgRefacciones.TabIndex = 10;
+            this.DgRefacciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgRefacciones_CellContentClick);
             // 
             // BtnCerrar
             // 
@@ -212,6 +214,7 @@
             this.BtnAgregar.Size = new System.Drawing.Size(48, 47);
             this.BtnAgregar.TabIndex = 14;
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnEditar
             // 
@@ -223,6 +226,7 @@
             this.BtnEditar.Size = new System.Drawing.Size(48, 47);
             this.BtnEditar.TabIndex = 13;
             this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnBorrar
             // 
@@ -234,6 +238,7 @@
             this.BtnBorrar.Size = new System.Drawing.Size(48, 47);
             this.BtnBorrar.TabIndex = 12;
             this.BtnBorrar.UseVisualStyleBackColor = false;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // Comprobacion
             // 

@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class Refacciones
     {
+        private string _CodigoBarras;
         private string _Nombre;
         private string _Marca;
         private string _Descripcion;
@@ -15,5 +16,6 @@ namespace Entidades
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Marca { get => _Marca; set => _Marca = value; }
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
+        public string CodigoBarras { get => _CodigoBarras; set => _CodigoBarras = value; }
     }
 }

@@ -16,7 +16,6 @@ namespace Angencia
     {
         LogicaHerramientas Analisis;
         Herramientas ListaH;
-        Usuarios ListaU;
         string Bandera = "G";
         public string Username ="";
         public FrmTaller(string Usuario)
@@ -24,7 +23,6 @@ namespace Angencia
             InitializeComponent();
             Analisis = new LogicaHerramientas();
             ListaH = new Herramientas();
-            ListaU = new Usuarios();
             Username = Usuario;
         }
 
@@ -117,10 +115,10 @@ namespace Angencia
         {
             DgHerramientas.DataSource = Analisis.ObtenerDatos();
         }
-        private void FrmTaller_Load(object sender, EventArgs e)
+        public void ComprobarPermisos()
         {
             string Mensaje = "";
-            List<Usuarios> Permisos =Analisis.OperacionesPermitidas(Username);
+            List<Usuarios> Permisos = Analisis.OperacionesPermitidas(Username);
             Usuarios usuario = Permisos[0];
             string PCA = usuario.PCA.ToString();
             string PE = usuario.PE.ToString();
@@ -130,7 +128,9 @@ namespace Angencia
                 BtnAgregar.Enabled = true;
                 BtnEditar.Enabled = true;
             }
-            else { Mensaje= Mensaje+"'Editar' 'Crear'";
+            else
+            {
+                Mensaje = Mensaje + "'Editar' 'Crear'";
                 BtnAgregar.Enabled = false;
                 BtnEditar.Enabled = false;
             }
@@ -148,7 +148,12 @@ namespace Angencia
             {
                 //No pasa nada xD
             }
-            else { MessageBox.Show("Estos permisos se te revocaron por el nivel de usuario que te asignaron: "+Mensaje,"Permisos", MessageBoxButtons.OK, MessageBoxIcon.Information);}
+            else { MessageBox.Show("Estos permisos se te revocaron por el nivel de usuario que te asignaron: " + Mensaje, "Permisos", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+
+        }
+        private void FrmTaller_Load(object sender, EventArgs e)
+        {
+            ComprobarPermisos();
         }
         public void VaciarCajas()
         {
